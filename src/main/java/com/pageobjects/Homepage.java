@@ -38,9 +38,7 @@ public class Homepage extends BASEclass {
 	    WebElement rightsideclick;
 		
 		  
-		
-		
-		
+
 		
 		
 		
@@ -73,7 +71,6 @@ public class Homepage extends BASEclass {
 	  // getDriver().switchTo().window(sd2);
 		  //Actionsclass.JSClick(getDriver(),searchoptdrb);
 		String parent=getDriver().getWindowHandle();
-		System.out.println(getDriver().switchTo().window( parent).getTitle()); 
 		Set<String>s=getDriver().getWindowHandles();
 		
 		// Now iterate using Iterator
@@ -113,6 +110,7 @@ public class Homepage extends BASEclass {
 		return new LEFTSIDE();
 		
 	}
+ 
    public RIGHTSIDE rightside() throws Throwable {
 		Actionsclass.click(getDriver(), rightsideclick);
 		return new RIGHTSIDE();

@@ -35,6 +35,7 @@ public abstract class ExtentReportHelper123
 	public ExtentTest test, suiteTest;
 	public String testCaseName, testNodes, testDescription, testdesc, category, authors;
 	public static File pathCheck;
+	String concatenate=".";
 
 	 //Get Date and Time
   	public static String GetCurrentDateAndTime()
@@ -54,8 +55,8 @@ public abstract class ExtentReportHelper123
 	//ExtentReport File storing Path
     public static String ExtentReportFileSavingPath()
     {
-    	 currentDirectory = System.getProperty("user.dir");
-    	 reportFileSavePath = currentDirectory + "/test-output/ExtentReport/";
+    	 currentDirectory =System.getProperty("user.dir");
+    	 reportFileSavePath = currentDirectory + "/ExtentReport/";
     	 System.out.println(reportFileSavePath);
     	 System.out.println("asccd4e");
     	 PathCheck();
@@ -130,7 +131,7 @@ public abstract class ExtentReportHelper123
 	public String  takeSnap(WebDriver driver) {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
-		String destination = System.getProperty("user.dir") + "/test-output/ExtentReport/images/" +  "_" + dateName + ".png";
+		String destination = "./ExtentReport/images/" +  "_" + dateName + ".png";
 
 		
 		try {
@@ -149,9 +150,25 @@ public abstract class ExtentReportHelper123
 		{
 			
 			
-			String snapNumber = takeSnap(driver);
+			String snapNumber =concatenate+ takeSnap(driver);
 			try {
 			  jh = MediaEntityBuilder.createScreenCaptureFromPath(snapNumber).build();
+				
+			} catch (Exception ex) {
+				System.out.println("Error in Taking Screenshot : " + ex.getMessage());
+			}catch (Throwable e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		Media jdh=null;
+		if(bSnap && status.equalsIgnoreCase("warning"))
+		{
+			
+			
+			String snapNumber =concatenate+ takeSnap(driver);
+			try {
+			  jdh = MediaEntityBuilder.createScreenCaptureFromPath(snapNumber).build();
 				
 			} catch (Exception ex) {
 				System.out.println("Error in Taking Screenshot : " + ex.getMessage());
@@ -215,7 +232,7 @@ public abstract class ExtentReportHelper123
 			
 
 		}else if (status.equalsIgnoreCase("WARNING")) {
-			test.warning(desc);
+			test.warning(desc,jdh);
 		}else if (status.equalsIgnoreCase("INFO")) {
 			test.info(desc);
 		}							

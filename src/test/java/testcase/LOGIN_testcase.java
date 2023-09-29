@@ -17,7 +17,7 @@ import com.utility.WebDriverListener123;
 
 public class LOGIN_testcase extends BASEclass {
 	
-	 WebDriverListener123 wl = new WebDriverListener123();
+
 		private static ExtentTest test;
 		public static String Status;
 		public static String testCaseName = "Login Functionality";

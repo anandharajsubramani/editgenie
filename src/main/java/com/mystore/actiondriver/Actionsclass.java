@@ -44,7 +44,7 @@ public class Actionsclass extends BASEclass  {
 
 	public static void click(WebDriver driver, WebElement ele)throws Throwable {
 		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		System.out.println(ele.getText());
+		//System.out.println(ele.getText());
 		//Actions act = new Actions(driver);
 		////act.moveToElement(ele);
 		//act.click().build().perform();
@@ -780,7 +780,7 @@ public class Actionsclass extends BASEclass  {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "\\ScreenShots\\" +  "_" + dateName + ".png";
+		String destination ="./ExtentReport/screenshots/" +  "_" + dateName + ".png";
  
 		 
 		try {

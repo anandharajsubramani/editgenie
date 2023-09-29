@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-26T21:51:30 IST" name="Suite" finished-at="2023-09-26T21:52:53 IST" duration-ms="83010">
+  <suite started-at="2023-09-29T15:55:20 IST" name="Suite" finished-at="2023-09-29T15:59:07 IST" duration-ms="227365">
     <groups>
       <group name="regression">
-        <method signature="LEFTSIDE_TEST.receiveddate()[pri:9, instance:testcase.LEFTSIDE_TEST@587e5365]" name="receiveddate" class="testcase.LEFTSIDE_TEST"/>
-        <method signature="LEFTSIDE_TEST.accepteddate()[pri:10, instance:testcase.LEFTSIDE_TEST@587e5365]" name="accepteddate" class="testcase.LEFTSIDE_TEST"/>
+        <method signature="RIGHTSIDE_test.authorqueries()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" name="authorqueries" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.edithistory()[pri:1, instance:testcase.RIGHTSIDE_test@bccb269]" name="edithistory" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.comments()[pri:2, instance:testcase.RIGHTSIDE_test@bccb269]" name="comments" class="testcase.RIGHTSIDE_test"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="LEFTSIDE_TEST.receiveddate()[pri:9, instance:testcase.LEFTSIDE_TEST@587e5365]" name="receiveddate" class="testcase.LEFTSIDE_TEST"/>
-        <method signature="LEFTSIDE_TEST.accepteddate()[pri:10, instance:testcase.LEFTSIDE_TEST@587e5365]" name="accepteddate" class="testcase.LEFTSIDE_TEST"/>
+        <method signature="RIGHTSIDE_test.authorqueries()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" name="authorqueries" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.edithistory()[pri:1, instance:testcase.RIGHTSIDE_test@bccb269]" name="edithistory" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.comments()[pri:2, instance:testcase.RIGHTSIDE_test@bccb269]" name="comments" class="testcase.RIGHTSIDE_test"/>
       </group> <!-- smoke -->
       <group name="sanity">
-        <method signature="LEFTSIDE_TEST.receiveddate()[pri:9, instance:testcase.LEFTSIDE_TEST@587e5365]" name="receiveddate" class="testcase.LEFTSIDE_TEST"/>
-        <method signature="LEFTSIDE_TEST.accepteddate()[pri:10, instance:testcase.LEFTSIDE_TEST@587e5365]" name="accepteddate" class="testcase.LEFTSIDE_TEST"/>
+        <method signature="RIGHTSIDE_test.authorqueries()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" name="authorqueries" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.edithistory()[pri:1, instance:testcase.RIGHTSIDE_test@bccb269]" name="edithistory" class="testcase.RIGHTSIDE_test"/>
+        <method signature="RIGHTSIDE_test.comments()[pri:2, instance:testcase.RIGHTSIDE_test@bccb269]" name="comments" class="testcase.RIGHTSIDE_test"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2023-09-26T21:51:30 IST" name="Test" finished-at="2023-09-26T21:52:53 IST" duration-ms="83010">
-      <class name="testcase.LEFTSIDE_TEST">
-        <test-method is-config="true" signature="launchbrowser1()[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:51:29 IST" name="launchbrowser1" finished-at="2023-09-26T21:51:30 IST" duration-ms="372" status="PASS">
+    <test started-at="2023-09-29T15:55:20 IST" name="Test" finished-at="2023-09-29T15:59:07 IST" duration-ms="227365">
+      <class name="testcase.RIGHTSIDE_test">
+        <test-method is-config="true" signature="launchbrowser1()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:55:19 IST" name="launchbrowser1" finished-at="2023-09-29T15:55:20 IST" duration-ms="503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser1 -->
-        <test-method is-config="true" signature="main()[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:51:30 IST" name="main" finished-at="2023-09-26T21:51:30 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="main()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:55:20 IST" name="main" finished-at="2023-09-29T15:55:20 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:51:30 IST" name="setup" finished-at="2023-09-26T21:51:47 IST" duration-ms="17643" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:55:20 IST" name="setup" finished-at="2023-09-29T15:55:37 IST" duration-ms="17646" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,52 +41,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="receiveddate()[pri:9, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:51:47 IST" name="receiveddate" finished-at="2023-09-26T21:52:12 IST" duration-ms="24730" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException
-at com.utility.ExtentReportHelper123.reportLogStep(ExtentReportHelper123.java:214)
-at com.utility.ExtentReportHelper123.reportStep(ExtentReportHelper123.java:225)
-at testcase.LEFTSIDE_TEST.receiveddate(LEFTSIDE_TEST.java:359)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method signature="authorqueries()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:55:37 IST" name="authorqueries" finished-at="2023-09-29T15:57:38 IST" duration-ms="120246" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- receiveddate -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:52:12 IST" name="teardown" finished-at="2023-09-26T21:52:12 IST" duration-ms="355" status="PASS">
+        </test-method> <!-- authorqueries -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:57:38 IST" name="teardown" finished-at="2023-09-29T15:57:38 IST" duration-ms="450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:52:12 IST" name="setup" finished-at="2023-09-26T21:52:28 IST" duration-ms="15264" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:57:38 IST" name="setup" finished-at="2023-09-29T15:57:54 IST" duration-ms="15728" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,56 +60,38 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="accepteddate()[pri:10, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:52:28 IST" name="accepteddate" finished-at="2023-09-26T21:52:52 IST" duration-ms="24512" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException
-at com.utility.ExtentReportHelper123.reportLogStep(ExtentReportHelper123.java:214)
-at com.utility.ExtentReportHelper123.reportStep(ExtentReportHelper123.java:225)
-at testcase.LEFTSIDE_TEST.accepteddate(LEFTSIDE_TEST.java:389)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method signature="edithistory()[pri:1, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:57:54 IST" name="edithistory" finished-at="2023-09-29T15:58:20 IST" duration-ms="26615" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accepteddate -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:52:52 IST" name="teardown" finished-at="2023-09-26T21:52:53 IST" duration-ms="454" status="PASS">
+        </test-method> <!-- edithistory -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:58:20 IST" name="teardown" finished-at="2023-09-29T15:58:21 IST" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:testcase.LEFTSIDE_TEST@587e5365]" started-at="2023-09-26T21:52:53 IST" name="aftersuite" finished-at="2023-09-26T21:52:53 IST" duration-ms="460" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:58:21 IST" name="setup" finished-at="2023-09-29T15:58:36 IST" duration-ms="15441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="comments()[pri:2, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:58:36 IST" name="comments" finished-at="2023-09-29T15:59:07 IST" duration-ms="30225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comments -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:59:07 IST" name="teardown" finished-at="2023-09-29T15:59:07 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:testcase.RIGHTSIDE_test@bccb269]" started-at="2023-09-29T15:59:07 IST" name="aftersuite" finished-at="2023-09-29T15:59:08 IST" duration-ms="570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
-      </class> <!-- testcase.LEFTSIDE_TEST -->
+      </class> <!-- testcase.RIGHTSIDE_test -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

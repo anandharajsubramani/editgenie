@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,6 +30,7 @@ import org.testng.annotations.BeforeSuite;
 
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.mystore.actiondriver.Actionsclass;
 
 import com.utility.ExtentManager;
@@ -42,8 +44,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public  class BASEclass {
 	
 
-	public static String authors = "Automation  - ANANDHARAJ";
-	static WebDriverListener123 wl = new WebDriverListener123();
+	
+	protected static WebDriverListener123 wl = new WebDriverListener123();
 	 //  public static WebDriver driver;
 	public static Properties props1;
 	public static Properties properties=null;
@@ -132,7 +134,10 @@ public static WebDriver getDriver() {
 	// Get Driver from threadLocalmap
 	return driver.get();
 }
-
+public static ExtentTest test()   {
+	// Get Driver from threadLocalmap
+	return wl.suiteTest;
+}
 
 
 @SuppressWarnings("deprecation")

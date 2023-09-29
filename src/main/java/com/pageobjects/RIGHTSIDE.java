@@ -50,32 +50,40 @@ public AUTHORqueriespage authorqueries() throws Throwable {
 	return new AUTHORqueriespage();
 }
  
-public void edithistory() throws Throwable {
-	Actionsclass.click(getDriver(), EDITHISTORYBUTTON); 
+public EDIThistorypage edithistory() throws Throwable {
+	Actionsclass.click(getDriver(), EDITHISTORYBUTTON);
+	return new EDIThistorypage();
 }
 
-public void comments() throws Throwable {
+public COMMENTpage comments() throws Throwable {
 	Actionsclass.click(getDriver(), COMMENTSBUTTON); 
+	return new COMMENTpage();
+
 }
 
-public void quicklink() throws Throwable {
+public QUICKLINKpage quicklink() throws Throwable {
 	Actionsclass.click(getDriver(), QUICKLINKBUTTON); 
+	return new QUICKLINKpage();
 }
 
-public void equation() throws Throwable {
+public EQUATIONpage equation() throws Throwable {
 	Actionsclass.click(getDriver(),EQUATIONBUTTON); 
+	return new EQUATIONpage();
 }
 
-public void figure() throws Throwable {
-	Actionsclass.click(getDriver(), FIGUREBUTTON); 
+public FIGUREpage figure() throws Throwable {
+	Actionsclass.click(getDriver(), FIGUREBUTTON);
+	return new FIGUREpage();
 }
 
-public void table() throws Throwable {
-	Actionsclass.click(getDriver(), TABLEBUTTON); 
+public TABLElinkpage table() throws Throwable {
+	Actionsclass.click(getDriver(), TABLEBUTTON);
+	return new TABLElinkpage();
 }
 
-public void ref() throws Throwable {
+public REFERANCEpage ref() throws Throwable {
 	Actionsclass.click(getDriver(), REFBUTTON); 
+	return new REFERANCEpage();
 }
 
 

@@ -445,6 +445,7 @@ public class Actionsclass extends BASEclass  {
 			Actions actions = new Actions(driver);
 			// actions.moveToElement(driver.findElement(locator)).build().perform();
 			actions.moveToElement(ele).build().perform();
+			
 			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -538,7 +539,7 @@ public class Actionsclass extends BASEclass  {
 		boolean flag = false;
 		try {
 			Actions clicker = new Actions(driver);
-			clicker.contextClick(ele).perform();
+			clicker.contextClick(ele).build().perform();
 			flag = true;
 			return true;
 			// driver.findElement(by1).sendKeys(Keys.DOWN);
@@ -763,7 +764,7 @@ public class Actionsclass extends BASEclass  {
 	}
 	
 	public static void implicitWait(WebDriver driver, int timeOut) throws Throwable {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
 	
 	public static void explicitWait(WebDriver driver, WebElement element, int timeOut ) {

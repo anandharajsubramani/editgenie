@@ -160,7 +160,7 @@ System.out.println( asd1 );
     Thread.sleep(5222);
     JavascriptExecutor js = (JavascriptExecutor) getDriver();
 	  js.executeScript("window.scroll(0,5000)");
-	  Thread.sleep(5222);
+	  Thread.sleep(3000);
 	 
  	
 }

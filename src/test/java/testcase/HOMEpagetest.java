@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
 import com.base.BASEclass;
 import com.dataprovider.Dataproviders;
+import com.pageobjects.ADDoptions_in_ABSTRACT;
+import com.pageobjects.ADDoptions_in_AUTHORNAME;
 import com.pageobjects.Homepage;
 
 import com.utility.Log;
@@ -40,36 +42,34 @@ public class HOMEpagetest extends BASEclass{
 		}
 	@AfterMethod()
 	public void teardown() throws Throwable {
-		getDriver().close();	
 		Thread.sleep(1000);
-  getDriver().quit();
+		  ///getDriver().close();	
+		  Thread.sleep(3000);
+///getDriver().quit();
 		}
-	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 0)
-	public void  logovalidation()throws Throwable {	
-		  test = wl.startTestCase(testNodes2, testcaseDescription2);
-		  test.assignCategory(category1);
-		 test.assignAuthor(authors);
-		 test.log(com.aventstack.extentreports.Status.INFO,"navigate to editgenie" );
-		 
-	 fed = new	Homepage();	
-	 fed.home();
-	 Thread.sleep(5000);
-	 test.log(com.aventstack.extentreports.Status.INFO,"Check whether the logo is there or not" );
-	 boolean results = fed.validatelogo();
-	   Thread.sleep(5555);
-	   // test.log(com.aventstack.extentreports.Status.INFO,"navigating to tracking system" );
-		if (results) {
-			test.log(com.aventstack.extentreports.Status.PASS,"Logo is present ");
- 			Status = "Pass";
- 			Log.info("login is success");	
-			
-		} else {
-			test.log(com.aventstack.extentreports.Status.FAIL," Logo is not present in homepage");
- 			Status = "Fail";
-		}
-		System.out.println(Status);
-		wl.reportStep(getDriver(), "The page logo is under verification", Status);
-		}
+
+		/*
+		 * @Test(dataProviderClass=Dataproviders.class,groups=
+		 * {"smoke","sanity","regression"},priority = 0) public void
+		 * logovalidation()throws Throwable { test = wl.startTestCase(testNodes2,
+		 * testcaseDescription2); test.assignCategory(category1);
+		 * test.assignAuthor(authors);
+		 * test.log(com.aventstack.extentreports.Status.INFO,"navigate to editgenie" );
+		 * 
+		 * fed = new Homepage(); fed.home(); Thread.sleep(5000);
+		 * test.log(com.aventstack.extentreports.Status.
+		 * INFO,"Check whether the logo is there or not" ); boolean results =
+		 * fed.validatelogo(); Thread.sleep(5555); //
+		 * test.log(com.aventstack.extentreports.Status.
+		 * INFO,"navigating to tracking system" ); if (results) {
+		 * test.log(com.aventstack.extentreports.Status.PASS,"Logo is present "); Status
+		 * = "Pass"; Log.info("login is success");
+		 * 
+		 * } else { test.log(com.aventstack.extentreports.Status.
+		 * FAIL," Logo is not present in homepage"); Status = "Fail"; }
+		 * System.out.println(Status); wl.reportStep(getDriver(),
+		 * "The page logo is under verification", Status); }
+		
 @Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
 public void titlevalidation () throws Throwable {
 	 test = wl.startTestCase(testNodes1, testcaseDescription1);
@@ -101,6 +101,59 @@ public void titlevalidation () throws Throwable {
 		}
 		System.out.println(Status);
  		wl.reportStep(getDriver(), "The page title is under verification", Status);
-}
+}*/
+	
+	
+/*	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
+	public void authorname () throws Throwable {
+
+		 fed = new	Homepage();	
+		 fed.home();
+		 System.out.println("fch123");
+		 fed.authortitle();
+			System.out.println("fch");
+			//ADDoptions_in_ABSTRACT cx = fed.abstractarea();
+		//cx.addcomment();
+	ADDoptions_in_AUTHORNAME fdh = fed.authorname();
+	//fdh.addfrontnotename();
+	//fdh.addcomment();
+	fdh.addorcid();
+	/*
+	 * fdh.addauthorname(); fdh.addaffiliations(); fdh.addaffiliation_citiation();
+	 * fdh.addaffiliation_delete();
+	
+		System.out.println("fch");
+		
+	}*/
+	
+	
+	
+	
+	
+	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
+	public void abstractarea () throws Throwable {
+
+		 fed = new	Homepage();	
+		 fed.home();
+		 System.out.println("fch123");
+		// fed.authortitle();
+			System.out.println("fch");
+	ADDoptions_in_ABSTRACT cx = fed.abstractarea();
+	cx.addcomment();
+	cx.addlink();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

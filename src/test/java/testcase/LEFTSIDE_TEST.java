@@ -66,9 +66,10 @@ public class LEFTSIDE_TEST  extends BASEclass{
 	
 	@AfterMethod()
 	public void teardown() throws Throwable {
-
+		Thread.sleep(1000);
 		  getDriver().close();	
-  getDriver().quit();
+		  Thread.sleep(3000);
+getDriver().quit();
 		}
 	
 	

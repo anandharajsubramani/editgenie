@@ -51,16 +51,15 @@ public class RIGHTSIDE_test extends BASEclass {
 	
 	@AfterMethod()
 	public void teardown() throws Throwable {
-
+		Thread.sleep(1000);
 		  getDriver().close();	
+		  Thread.sleep(3000);
  getDriver().quit();
 		}
 	
 
 @Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 0)
 	public void  authorqueries()throws Throwable {	
-		 
-		  
 	 fed = new	Homepage();	
 	    fed.home();
 	    Thread.sleep(4000);
@@ -88,7 +87,7 @@ public class RIGHTSIDE_test extends BASEclass {
 		 }
 	
 
-	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 2)
+@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 2)
 	public void  comments()throws Throwable {	
 		 
 		  

@@ -7,16 +7,16 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcase.RIGHTSIDE_test">
+      <class name="testcase.HOMEpagetest">
         <methods>
           <include name="launchbrowser1"/>
-          <include name="edithistory"/>
-          <include name="aftersuite"/>
           <include name="teardown"/>
-          <include name="setup"/>
+          <include name="abstractarea"/>
+          <include name="aftersuite"/>
           <include name="main"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testcase.RIGHTSIDE_test -->
+      </class> <!-- testcase.HOMEpagetest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

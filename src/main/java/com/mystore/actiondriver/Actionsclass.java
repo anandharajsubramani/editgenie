@@ -56,6 +56,19 @@ public class Actionsclass extends BASEclass  {
 
 	}
 
+	public static void doubleclick(WebDriver driver, WebElement ele)throws Throwable {
+		//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		//System.out.println(ele.getText());
+		//Actions act = new Actions(driver);
+		////act.moveToElement(ele);
+		//act.click().build().perform();
+		
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].scrollIntoView(true);", ele);
+		    Actions a = new Actions(driver);
+		    a.moveToElement(ele).doubleClick().build().perform();  
+
+	}
 
 
 	public static boolean findElement(WebDriver driver, WebElement ele)throws Throwable {

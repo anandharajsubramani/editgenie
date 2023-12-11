@@ -2,6 +2,7 @@ package com.pageobjects;
 
 import static org.testng.Assert.assertEquals;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -13,6 +14,7 @@ import org.apache.poi.hssf.record.formula.functions.Second;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -94,16 +96,14 @@ public class Homepage extends BASEclass {
 	WebElement clickelementok;
  	@FindBy(xpath=" //div[@class='cke_menu']")
 	WebElement select;
- 	
- 	
- 	
- 	
-    
+ 
     @FindBy(xpath="//div[@class='cke_menu']/span ")
     List<WebElement> rightclick;
     
-
-    
+// reference
+    @FindBy(xpath="//span[@class='edit_ref_tooltip']")
+    List<WebElement> refarea;
+   	
    
    
    
@@ -231,7 +231,8 @@ return new ADDoptions_in_ABSTRACT();
 			if (wed.equals(wed)) {
 				System.out.println("12434bbncvb");
 			    Thread.sleep(3000);
-				Actionsclass.rightclick(getDriver(), wed);
+				//Actionsclass.rightclick(getDriver(), wed);
+			    Actionsclass.doubleclick(getDriver(), wed);
 				break;
 			}  
 		 }
@@ -241,6 +242,72 @@ return new ADDoptions_in_ABSTRACT();
 
 		 }
    
+
+
+
+
+public void reference_area() throws Throwable {
+	   System.out.println("bbncvb");
+	   getDriver().switchTo().frame(iframe);
+	  int count = refarea.size();
+	   System.out.println(count);
+		/*
+		 * for(int i=0;i<count;i++) { WebElement alltext = refarea.get(i); String ca =
+		 * alltext.getText(); System.out.println(ca);
+		 * 
+		 * }
+		 */
+	   for(WebElement wed: refarea ) {
+			 System.out.println("bbncvb1234");
+			if (wed.isEnabled()==true) {
+				
+				System.out.println("12434bbncvb");
+			    Thread.sleep(4000);
+			   // WebDriverWait wait = new WebDriverWait( getDriver(), 10);
+			    WebDriverWait waa = new WebDriverWait(getDriver(), Duration.ofHours(10));
+			    waa.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(wed)));
+			    wed.click();
+			    Thread.sleep(2000);
+			    getDriver().switchTo().defaultContent();
+			    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
+			    Thread.sleep(4000);
+			    getDriver().switchTo().frame(iframe);
+			    // Click on the element
+			    
+				//Actionsclass.rightclick(getDriver(), wed);
+			   // Actionsclass.doubleclick(getDriver(), wed);
+			   /* try {
+			    	Actionsclass.click(getDriver(), wed);
+			    	  getDriver().switchTo().defaultContent();
+					    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
+					    Thread.sleep(4000);
+					} 
+			    catch (StaleElementReferenceException e) {
+					  // Refresh the page
+					  getDriver().navigate().refresh();
+					  // Try to locate the element again
+					  Actionsclass.click(getDriver(), wed);
+					  getDriver().switchTo().defaultContent();
+					    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
+					    Thread.sleep(4000);
+					}*/
+			    
+			  
+			}  
+		 }
+	
+
+	  
+
+		 }
+
 }
 
-	
+
+
+
+
+
+
+
+

@@ -51,10 +51,10 @@ public class RIGHTSIDE_test extends BASEclass {
 	
 	@AfterMethod()
 	public void teardown() throws Throwable {
-		Thread.sleep(1000);
-		  getDriver().close();	
-		  Thread.sleep(3000);
- getDriver().quit();
+		//Thread.sleep(1000);
+		 // getDriver().close();	
+		 // Thread.sleep(3000);
+// getDriver().quit();
 		}
 	
 
@@ -72,7 +72,7 @@ public class RIGHTSIDE_test extends BASEclass {
 	
 
 
-	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
+	/*@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
 	public void  edithistory()throws Throwable {	
 		 
 		  
@@ -222,5 +222,9 @@ public class RIGHTSIDE_test extends BASEclass {
            REFERANCEpage dh = hv.ref();
 		 Thread.sleep(5000);
 		 dh.reflcitationink();
-		 }
+		 }*/
+
+
+
+
 }

@@ -11,9 +11,9 @@
         <methods>
           <include name="launchbrowser1"/>
           <include name="teardown"/>
-          <include name="abstractarea"/>
           <include name="aftersuite"/>
           <include name="main"/>
+          <include name="reference_area"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcase.HOMEpagetest -->

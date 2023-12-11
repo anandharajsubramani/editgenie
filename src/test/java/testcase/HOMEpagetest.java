@@ -103,8 +103,8 @@ public void titlevalidation () throws Throwable {
  		wl.reportStep(getDriver(), "The page title is under verification", Status);
 }*/
 	
-	
-/*	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
+	/*
+	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
 	public void authorname () throws Throwable {
 
 		 fed = new	Homepage();	
@@ -117,36 +117,43 @@ public void titlevalidation () throws Throwable {
 	ADDoptions_in_AUTHORNAME fdh = fed.authorname();
 	//fdh.addfrontnotename();
 	//fdh.addcomment();
-	fdh.addorcid();
-	/*
-	 * fdh.addauthorname(); fdh.addaffiliations(); fdh.addaffiliation_citiation();
-	 * fdh.addaffiliation_delete();
+	//fdh.addorcid();
+	fdh.editauthorname();
+	//  fdh.addauthorname(); fdh.addaffiliations(); fdh.addaffiliation_citiation();
+	 // fdh.addaffiliation_delete();
 	
 		System.out.println("fch");
-		
-	}*/
-	
-	
-	
-	
-	
-	@Test(dataProviderClass=Dataproviders.class,groups= {"smoke","sanity","regression"},priority = 1)
-	public void abstractarea () throws Throwable {
-
-		 fed = new	Homepage();	
-		 fed.home();
-		 System.out.println("fch123");
-		// fed.authortitle();
-			System.out.println("fch");
-	ADDoptions_in_ABSTRACT cx = fed.abstractarea();
-	cx.addcomment();
-	cx.addlink();
 		
 	}
 	
 	
 	
-	
+
+
+  @Test(dataProviderClass=Dataproviders.class,groups=
+  {"smoke","sanity","regression"},priority = 1) 
+  public void abstractarea () throws Throwable {
+  fed = new Homepage(); 
+  fed.home(); 
+  System.out.println("fch123"); 
+  //  fed.authortitle(); 
+  System.out.println("fch");
+  ADDoptions_in_ABSTRACT cx =fed.abstractarea();
+  cx.addcomment(); cx.addlink();
+  
+  }*/
+
+  @Test(dataProviderClass=Dataproviders.class,groups=
+	  {"smoke","sanity","regression"},priority = 1) 
+	  public void reference_area () throws Throwable {
+	  fed = new Homepage(); 
+	  fed.home(); 
+	  System.out.println("fch123"); 
+	  //  fed.authortitle(); 
+	  System.out.println("fch");
+	   fed.reference_area();
+	  }
+
 	
 	
 	

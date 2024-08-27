@@ -8,16 +8,16 @@
    <parameter name="browser" value="chrome"></parameter>
   <classes>
       <!--   <class name="testcase.LOGIN_testcase" /> 
-       
- 
- <class name="testcase.RIGHTSIDE_test" /> 
+      
+      <class name="testcase.RIGHTSIDE_test" />      
+
      <class name="testcase.LEFTSIDE_TEST" />
  
       <class name="testcase.journal_tst" /> 
   -->
-   <class name="testcase.HOMEpagetest" />  
-     
-                  
+   <class name="testcase.HOMEpagetest" />
+    
+             
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

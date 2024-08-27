@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.SEARCHOPTION">
+      <class name="testcase.HOMEpagetest">
         <methods>
-          <include name="searchtest"/>
-          <include name="setup"/>
+          <include name="authorname1"/>
           <include name="teardown"/>
+          <include name="launchbrowser1"/>
+          <include name="aftersuite"/>
+          <include name="authorname"/>
+          <include name="main"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testcase.SEARCHOPTION -->
+      </class> <!-- testcase.HOMEpagetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -82,7 +82,7 @@ public void authorqueries() throws Throwable {
 					// resolved text check box
 					getDriver().findElement(By.xpath("//li[@id=\""+aqVal+"\"]//div[@class='col-12 aqactions']//input[@id=\"changeCheck"+aqVal+"\"]")).click();
 					Thread.sleep(3333);
-					  test.log(com.aventstack.extentreports.Status.INFO,"given  to the comments in resloved text box" );
+					/*  test.log(com.aventstack.extentreports.Status.INFO,"given  to the comments in resloved text box" );
 					// resloved area
 					  getDriver().findElement(By.xpath("//li[@id=\""+aqVal+"\"]//text()[normalize-space(.)='Reply with comment']/parent::*")).
 					  click(); // getDriver().switchTo().frame(reply_comment_type);
@@ -119,7 +119,7 @@ public void authorqueries() throws Throwable {
 					  Thread.sleep(1000);
 					  getDriver().findElement(By.xpath("//*[@id=\"model_add_attachment\"]/div/div/div[1]/button")).click();
 					  getDriver().switchTo().defaultContent();   
-				//  getDriver().findElement(By.xpath("//text()[normalize-space(.)='Browse File']/parent::*")).click();
+				//  getDriver().findElement(By.xpath("//text()[normalize-space(.)='Browse File']/parent::*")).click();*/
 			}
 			// String dd = Actionsclass.screenShot(getDriver());
 			// String gh = "." +dd;

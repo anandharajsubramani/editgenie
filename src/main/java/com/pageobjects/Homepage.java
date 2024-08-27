@@ -60,7 +60,8 @@ public class Homepage extends BASEclass {
 		//authorname area front matter
         @FindBy(xpath="/html[1]/body/article/div/div/div[@class='contrib-group']/span[@class='contrib']/span[@class='name']")
         List<WebElement> authorname;
-    
+        @FindBy(xpath="/html[1]/body/article/div/div/div[@class='contrib-group']/span[@class='contrib']/span[1]")
+        WebElement authorname1;
     // common iframes
     @FindBy(xpath=" //*[@id=\"cke_1_contents\"]/iframe")
 	WebElement iframe;
@@ -82,9 +83,11 @@ public class Homepage extends BASEclass {
     @FindBy(xpath="  /html/body/article/div[1]/div/div[@class='abstract']/div[2]")
    	WebElement abstractpara;
   
-    //    
+    //     
     @FindBy(xpath="/html[1]/body/article/div[1]/div/div[@class='abstract']/div[position()=(2) and contains(text(), 'the')]")
    	WebElement abstractpara1;
+    @FindBy(xpath="/html/body/article/div[2]/p[3]")
+   	WebElement abstractpara12;
     @FindBy(xpath="/html/body/article/div[1]/div/div[8]/div[position()=(2) and contains(text(), 'ovary')]")
 	WebElement abstractpara2;
     //comment area functions
@@ -200,7 +203,7 @@ public class Homepage extends BASEclass {
 	   System.out.println("ggyg123");
 	   
 //Actionsclass.implicitWait(getDriver(), 30);
-Thread.sleep(30000); 
+Thread.sleep(5000); 
 getDriver().switchTo().frame(iframe);
 Actions actions = new Actions(getDriver());
 // actions.moveToElement(driver.findElement(locator)).build().perform();
@@ -208,34 +211,45 @@ Actions actions = new Actions(getDriver());
 //abstractpara1.sendKeys(Keys.chord(Keys.CONTROL,Keys.SHIFT, Keys.ARROW_LEFT,Keys.ARROW_LEFT ));
 //getDriver().switchTo().frame(iframe);
 actions.moveToElement(abstractpara1, 50,30 ).sendKeys(Keys.chord(Keys.CONTROL,Keys.SHIFT, Keys.ARROW_LEFT,Keys.ARROW_LEFT )).clickAndHold().moveByOffset(30, 0).release().contextClick().build().perform();
+//actions.moveToElement(abstractpara12, 50,30 ).click().build().perform();
 
 //assertEquals(ArithmeticException.class,Exception.class);
 getDriver().switchTo().defaultContent();
+
+//getDriver().findElement(By.xpath("//*[@id=\"cke_editor\"]/div/span[1]/span[2]/span[6] /span[3]/a[@title='Insert Citation']")).click();
+
+//actions.moveToElement(getDriver().findElement(By.xpath("//*[@id='numeric_updown']"))).contextClick().sendKeys(Keys.chord(Keys.BACK_SPACE)).sendKeys(Keys.chord(Keys.BACK_SPACE)).sendKeys("23").build().perform();
+//actions.moveToElement(getDriver().findElement(By.xpath("//*[@id='numeric_updown']"))).
+System.out.println("dg123");
+
+
 Thread.sleep(1000);
 return new ADDoptions_in_ABSTRACT();
  
    }
 
    public ADDoptions_in_AUTHORNAME authorname() throws Throwable {
-	   System.out.println("bbncvb");
+	 // getDriver().switchTo().frame(iframe);
 	  int count = authorname.size();
 	   System.out.println(count);
-	   for(int i=0;i<count;i++) {
+	  /* for(int i=0;i<count;i++) {
 		   WebElement alltext = authorname.get(i);
 		   String ca = alltext.getText();
 		   System.out.println(ca);
 		   
-	   }
-	   for(WebElement wed: authorname ) {
+	   }*/
+	  /* for(WebElement wed: authorname ) {
 			 System.out.println("bbncvb1234");
 			if (wed.equals(wed)) {
 				System.out.println("12434bbncvb");
 			    Thread.sleep(3000);
-				//Actionsclass.rightclick(getDriver(), wed);
-			    Actionsclass.doubleclick(getDriver(), wed);
+				Actionsclass.rightclick(getDriver(), wed);
+			    //Actionsclass.doubleclick(getDriver(), wed);
 				break;
 			}  
-		 }
+		 }*/
+	   /*   
+	   Actionsclass.rightclick(getDriver(), authorname1);*/
 	   getDriver().switchTo().defaultContent();
 
 	   return new ADDoptions_in_AUTHORNAME();
@@ -246,7 +260,7 @@ return new ADDoptions_in_ABSTRACT();
 
 
 
-public void reference_area() throws Throwable {
+public ADDoptions_in_refernece reference_area() throws Throwable {
 	   System.out.println("bbncvb");
 	   getDriver().switchTo().frame(iframe);
 	  int count = refarea.size();
@@ -267,38 +281,18 @@ public void reference_area() throws Throwable {
 			    WebDriverWait waa = new WebDriverWait(getDriver(), Duration.ofHours(10));
 			    waa.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(wed)));
 			    wed.click();
-			    Thread.sleep(2000);
+			    break;
+			   /* Thread.sleep(2000);
 			    getDriver().switchTo().defaultContent();
 			    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
 			    Thread.sleep(4000);
-			    getDriver().switchTo().frame(iframe);
-			    // Click on the element
-			    
-				//Actionsclass.rightclick(getDriver(), wed);
-			   // Actionsclass.doubleclick(getDriver(), wed);
-			   /* try {
-			    	Actionsclass.click(getDriver(), wed);
-			    	  getDriver().switchTo().defaultContent();
-					    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
-					    Thread.sleep(4000);
-					} 
-			    catch (StaleElementReferenceException e) {
-					  // Refresh the page
-					  getDriver().navigate().refresh();
-					  // Try to locate the element again
-					  Actionsclass.click(getDriver(), wed);
-					  getDriver().switchTo().defaultContent();
-					    getDriver().findElement(By.xpath("//*[@id='btn_close_insert']")).click();
-					    Thread.sleep(4000);
-					}*/
-			    
-			  
+			    getDriver().switchTo().frame(iframe);*/
+
 			}  
 		 }
-	
-
-	  
-
+	   getDriver().switchTo().defaultContent();
+	   System.out.println("fghghf");
+return new  ADDoptions_in_refernece();
 		 }
 
 }

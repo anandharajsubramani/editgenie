@@ -4,40 +4,22 @@ package com.base;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-
 import java.io.FileReader;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.mystore.actiondriver.Actionsclass;
-
-import com.utility.ExtentManager;
-
 import com.utility.WebDriverListener123;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
@@ -51,8 +33,11 @@ public  class BASEclass {
 	public static Properties properties=null;
 	public  static String url="";
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
-	@BeforeSuite(groups=  {"smoke","sanity","regression"})
-	public void launchbrowser1() throws IOException {
+	
+	
+	
+@BeforeSuite(groups=  {"smoke","sanity","regression"})
+public void launchbrowser1() throws IOException {
 		//ExtentManager.setExtent();
 		DOMConfigurator.configure("log4j.xml");
 		wl.startResult();
